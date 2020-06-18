@@ -15,7 +15,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
 
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
 
 
 
@@ -41,11 +41,50 @@
         </div>
         <div class="row">
             <div class="col-xs-12 offset-md-5   col-sm-4 col-md-4">
-               <button ng-click="ingresarLogin(usuario)" class="btn btn-primary  btn-block">Ingresar</button>
+               <button ng-click="verificarUsuario(usuario)" class="btn btn-primary  btn-block">Ingresar</button>
             </div>
-
+            <label id="mensajeIngreso"></label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button ng-click="facebookUsuario()" >Facebook</button>
+            </div>
         </div>
     </div>
+
+
+         <!-- Code para Firebase -->
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+        
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+        <!-- <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script> -->
+        <!-- <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script> -->
+        
+  <!-- include only the Firebase features as you need -->
+  <script defer src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyAG2E1UzAYf5nezjQDu7gbRxuj7nBOVp0I",
+                authDomain: "miproyectowcs.firebaseapp.com",
+                databaseURL: "https://miproyectowcs.firebaseio.com",
+                projectId: "miproyectowcs",
+                storageBucket: "miproyectowcs.appspot.com",
+                messagingSenderId: "764789544048",
+                appId: "1:764789544048:web:2c323ed3d351ccb43750b5",
+                measurementId: "G-9T88PR5E2C"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            // firebase.auth();
+        </script>
+
+  
+        <script src="index.js"></script>
 
 
 </body>
